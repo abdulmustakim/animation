@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Digital Experience</title>
+  <meta name="description" content="A futuristic cinematic digital agency website with neon UI, 3D cards, particles, and smooth animations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader-orbit">
+      <span></span><span></span><span></span>
+    </div>
+    <p>Loading Digital Universe</p>
+  </div>
+
+  <canvas id="spaceCanvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <a href="#home" class="brand" aria-label="Creative Digital Experience home">
+      <span class="brand-mark">C</span>
+      <span>Creative<span>DX</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="paletteBtn" aria-label="Change neon color">✦</button>
+      <a href="#contact" class="nav-cta">Start Project</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> Futuristic Web Studio</div>
+          <h1>
+            Creative Digital
+            <span>Experience</span>
+          </h1>
+          <p class="hero-text">
+            We build cinematic websites, AI product interfaces, portfolio systems, and premium landing pages that feel like a sci‑fi movie and work like a professional business platform.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="#projects">Explore Showcase</a>
+            <a class="secondary-btn" href="#services">View Services</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Website statistics">
+            <div>
+              <strong>45+</strong>
+              <span>Creative Screens</span>
+            </div>
+            <div>
+              <strong>99%</strong>
+              <span>Responsive UI</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Digital Presence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="Animated digital experience preview">
+          <div class="orbital-stage" id="orbitalStage">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="core-card tilt-card">
+              <div class="card-topbar"><span></span><span></span><span></span></div>
+              <div class="holo-ring"></div>
+              <h2>CREATE<br>DIGITAL<br><span>EXPERIENCE</span></h2>
+              <p>Premium UI • Motion • AI Ready</p>
+            </div>
+            <div class="floating-card card-a tilt-card">
+              <span>01</span>
+              <b>HOLOGRAM UI</b>
+            </div>
+            <div class="floating-card card-b tilt-card">
+              <span>02</span>
+              <b>3D WEB FLOW</b>
+            </div>
+            <div class="floating-card card-c tilt-card">
+              <span>03</span>
+              <b>NEON DESIGN</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span>
+        Scroll to discover
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Technology marquee">
+      <div class="marquee-track">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Animations</span><span>Responsive</span><span>Glassmorphism</span><span>Neon UI</span><span>Creative Portfolio</span>
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Animations</span><span>Responsive</span><span>Glassmorphism</span><span>Neon UI</span><span>Creative Portfolio</span>
+      </div>
+    </section>
+
+    <section class="section mission" id="mission">
+      <div class="section-heading reveal">
+        <p>Welcome to the mission</p>
+        <h2>Make your website unforgettable at first look.</h2>
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-panel reveal tilt-card">
+          <div class="panel-number">01</div>
+          <h3>Strategy</h3>
+          <p>We plan the page structure, audience journey, and important call-to-action buttons before design starts.</p>
+        </article>
+        <article class="mission-panel reveal delay-1 tilt-card">
+          <div class="panel-number">02</div>
+          <h3>Visual Impact</h3>
+          <p>Dark cinematic layout, glowing gradients, animated cards, and a modern digital dashboard style.</p>
+        </article>
+        <article class="mission-panel reveal delay-2 tilt-card">
+          <div class="panel-number">03</div>
+          <h3>Real Function</h3>
+          <p>Working menu, project carousel, contact form, download action, mobile menu, and smooth scroll reveal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase" id="projects">
+      <div class="showcase-head reveal">
+        <div>
+          <p class="mini-label">Selected Universe</p>
+          <h2>Interactive Project Showcase</h2>
+        </div>
+        <div class="slider-controls">
+          <button id="prevProject" aria-label="Previous project">‹</button>
+          <button id="nextProject" aria-label="Next project">›</button>
+        </div>
+      </div>
+
+      <div class="project-slider reveal delay-1" id="projectSlider">
+        <article class="project-card active" style="--i: 0">
+          <div class="project-bg"></div>
+          <div class="project-content">
+            <span>Prometheus</span>
+            <h3>AI Startup Landing Page</h3>
+            <p>Cinematic hero section, AI dashboard preview, user conversion blocks, and premium product storytelling.</p>
+            <a href="#contact">Build Similar</a>
+          </div>
+        </article>
+        <article class="project-card" style="--i: 1">
+          <div class="project-bg alt-one"></div>
+          <div class="project-content">
+            <span>Secret Sky</span>
+            <h3>Gaming Event Website</h3>
+            <p>High-energy neon interface with event timer, battle cards, team sections, and animated registration flow.</p>
+            <a href="#contact">Build Similar</a>
+          </div>
+        </article>
+        <article class="project-card" style="--i: 2">
+          <div class="project-bg alt-two"></div>
+          <div class="project-content">
+            <span>Challenge 2.0</span>
+            <h3>Creative Portfolio System</h3>
+            <p>3D portfolio cards, project filters, skill galaxy, testimonials, and contact lead capture.</p>
+            <a href="#contact">Build Similar</a>
+          </div>
+        </article>
+        <article class="project-card" style="--i: 3">
+          <div class="project-bg alt-three"></div>
+          <div class="project-content">
+            <span>Patronus</span>
+            <h3>Education Web Platform</h3>
+            <p>Animated course UI, syllabus library, quiz screens, download panel, and student dashboard layout.</p>
+            <a href="#contact">Build Similar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading reveal">
+        <p>What we create</p>
+        <h2>Premium website features included.</h2>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card reveal tilt-card">
+          <div class="service-icon">⌁</div>
+          <h3>Landing Page</h3>
+          <p>Hero, features, pricing, FAQ, testimonials, and strong call-to-action layout.</p>
+        </div>
+        <div class="service-card reveal delay-1 tilt-card">
+          <div class="service-icon">◌</div>
+          <h3>Portfolio</h3>
+          <p>About, skills, project gallery, resume button, social links, and contact form.</p>
+        </div>
+        <div class="service-card reveal delay-2 tilt-card">
+          <div class="service-icon">⬡</div>
+          <h3>Business Site</h3>
+          <p>Service pages, gallery, WhatsApp button, map section, reviews, and appointment system UI.</p>
+        </div>
+        <div class="service-card reveal tilt-card">
+          <div class="service-icon">✦</div>
+          <h3>AI Product UI</h3>
+          <p>Prompt box, dashboard, template gallery, generation screen, and download flow.</p>
+        </div>
+        <div class="service-card reveal delay-1 tilt-card">
+          <div class="service-icon">▣</div>
+          <h3>Admin Dashboard</h3>
+          <p>Analytics cards, user table, charts mockup, notifications, and control panel design.</p>
+        </div>
+        <div class="service-card reveal delay-2 tilt-card">
+          <div class="service-icon">☄</div>
+          <h3>Animation System</h3>
+          <p>Scroll reveal, hover tilt, canvas particles, glowing cursor, and responsive motion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="process-shell reveal">
+        <div class="terminal-card">
+          <div class="terminal-head"><span></span><span></span><span></span></div>
+          <pre id="typingCode" aria-label="Animated website workflow text"></pre>
+        </div>
+        <div class="process-copy">
+          <p class="mini-label">Development Flow</p>
+          <h2>From idea to launch-ready website.</h2>
+          <p>Share your idea, choose the style, add your content, test it on mobile, then publish on GitHub Pages, Netlify, or Vercel.</p>
+          <button class="download-btn" id="downloadBtn">Download Project Plan</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <p class="mini-label">Start Mission</p>
+          <h2>Tell us your website idea.</h2>
+          <p>Use this form for portfolio, agency, AI tool, clinic, ITI project, gaming page, product landing page, or business website ideas.</p>
+          <div class="contact-tags">
+            <span>Fast</span><span>Responsive</span><span>Creative</span><span>Modern</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal delay-1" id="contactForm">
+          <label>
+            Your Name
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+          <label>
+            Project Type
+            <select name="type" required>
+              <option value="">Select project</option>
+              <option>Portfolio Website</option>
+              <option>Business Website</option>
+              <option>AI Tool Website</option>
+              <option>College Project Website</option>
+              <option>Gaming / Event Website</option>
+            </select>
+          </label>
+          <label>
+            Your Message
+            <textarea name="message" placeholder="Write your website idea..." required></textarea>
+          </label>
+          <button type="submit" class="primary-btn full">Send Request</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> CreativeDX. Designed for futuristic digital experiences.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
